@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_marginBottom="0dp"
+    android:elevation="50dp"
+    android:paddingHorizontal="15dp"
+    android:paddingVertical="15dp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_nama_barang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:textColorHint="@color/darkBlue"
+        app:boxStrokeWidth="1dp"
+        app:hintTextColor="@color/black">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama Barang"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_harga_barang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/input_nama_barang"
+        android:layout_marginVertical="5dp"
+        android:textColorHint="@color/darkBlue"
+        app:boxStrokeWidth="1dp"
+        app:hintTextColor="@color/black">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Harga Barang"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_stok_barang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:layout_below="@id/input_harga_barang"
+        android:textColorHint="@color/darkBlue"
+        app:boxStrokeWidth="1dp"
+        app:hintTextColor="@color/black">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Stok Barang"
+            android:inputType="numberDecimal"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_pcs_barang"
+        android:layout_below="@id/input_stok_barang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:textColorHint="@color/darkBlue"
+        app:boxStrokeWidth="1dp"
+        app:hintTextColor="@color/black"
+        android:hint="Satuan"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="none"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_tambah_barang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/input_pcs_barang"
+        app:backgroundTint="@color/colorPrimary"
+        android:layout_marginTop="15dp"
+        android:paddingVertical="15dp"
+        android:text="Tambah Barang"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:cornerRadius="5dp" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_cancel_barang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_tambah_barang"
+        app:backgroundTint="#e82315"
+        android:layout_marginTop="10dp"
+        android:paddingVertical="15dp"
+        android:text="Batalkan"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:cornerRadius="5dp" />
+
+
+</RelativeLayout>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        app:title="Kasir Cepat"
+        app:titleTextColor="@color/white"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <RelativeLayout
+        android:layout_below="@id/my_toolbar"
+        android:paddingHorizontal="10dp"
+        android:id="@+id/navbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_reset"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/btn_bayar"
+            android:backgroundTint="@color/yellow"
+            android:layout_marginHorizontal="5dp"
+            android:paddingVertical="12dp"
+            android:text="Reset"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:cornerRadius="5dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_bayar"
+            app:cornerRadius="5dp"
+            android:layout_alignParentEnd="true"
+            android:layout_width="120dp"
+            android:paddingVertical="12dp"
+            android:layout_height="wrap_content"
+            android:text="Bayar"
+            android:backgroundTint="#11870f"
+            android:textStyle="bold"
+            android:textSize="18dp"/>
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:paddingHorizontal="10dp"
+        android:id="@+id/recyclerBarang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/navbar"
+        android:layout_above="@id/btn_tambah_barang"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_marginHorizontal="10dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/btn_tambah_barang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@color/colorPrimary"
+        android:layout_marginTop="15dp"
+        android:paddingVertical="15dp"
+        android:text="Tambah Barang"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:cornerRadius="5dp" />
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/relativeLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginBottom="0dp"-->
+<!--        android:elevation="50dp"-->
+<!--        android:paddingHorizontal="15dp"-->
+<!--        android:paddingVertical="15dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent">-->
+
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:id="@+id/input_nama_barang"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginVertical="5dp"-->
+<!--            android:textColorHint="@color/darkBlue"-->
+<!--            app:boxStrokeWidth="1dp"-->
+<!--            app:hintTextColor="@color/black">-->
+
+<!--            <com.google.android.material.textfield.TextInputEditText-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:hint="Nama Barang"-->
+<!--                android:inputType="text"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="18dp"-->
+<!--                android:textStyle="bold" />-->
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:id="@+id/input_harga_barang"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/input_nama_barang"-->
+<!--            android:layout_marginVertical="5dp"-->
+<!--            android:textColorHint="@color/darkBlue"-->
+<!--            app:boxStrokeWidth="1dp"-->
+<!--            app:hintTextColor="@color/black">-->
+
+<!--            <com.google.android.material.textfield.TextInputEditText-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:hint="Harga Barang"-->
+<!--                android:inputType="number"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="18dp"-->
+<!--                android:textStyle="bold" />-->
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+<!--        <LinearLayout-->
+<!--            android:layout_below="@id/input_harga_barang"-->
+<!--            android:id="@+id/input_harga_pcs"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+<!--                android:id="@+id/input_jumlah_barang"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginVertical="5dp"-->
+<!--                android:textColorHint="@color/darkBlue"-->
+<!--                app:boxStrokeWidth="1dp"-->
+<!--                app:hintTextColor="@color/black">-->
+
+<!--                <com.google.android.material.textfield.TextInputEditText-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:hint="Jumlah Barang"-->
+<!--                    android:inputType="numberDecimal"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="18dp"-->
+<!--                    android:textStyle="bold" />-->
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:id="@+id/input_pcs_barang"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginVertical="5dp"-->
+<!--                android:textColorHint="@color/darkBlue"-->
+<!--                app:boxStrokeWidth="1dp"-->
+<!--                app:hintTextColor="@color/black"-->
+<!--                android:hint="Satuan"-->
+<!--                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">-->
+
+<!--                <AutoCompleteTextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:inputType="none"-->
+
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="18dp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    />-->
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
+<!--        </LinearLayout>-->
+
+
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:id="@+id/btn_tambah_barang"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/input_harga_pcs"-->
+<!--            android:layout_marginTop="15dp"-->
+<!--            android:paddingVertical="15dp"-->
+<!--            android:text="Tambah Barang"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="18dp"-->
+<!--            app:cornerRadius="5dp" />-->
+<!--    </RelativeLayout>-->
+
+</RelativeLayout>
